@@ -197,7 +197,7 @@ def build_full_kb(include_history: bool = True, last_n: int = 5):
     )
 
     # return full text + meta + data for UI tables
-    return full_kb, {"gw": gw_now, "players": len(p_lines)}, players, team_fx_lines
+    return full_kb, {"gw": gw_now, "players": len(p_lines),"kb_built": header}, players, team_fx_lines
 
 
 # --------------- Build / refresh FULL KB ---------------
@@ -217,7 +217,7 @@ else:
         st.session_state.fixtures_text,
     )
 
-st.caption(f"KB ready • {kb_meta['players']} players • GW: {kb_meta['gw']}")
+st.caption(kb_meta['header'])
 
 # --------------- Stats Tabs ---------------
 tab1, tab2, tab3, tab4, tab5 = st.tabs(
