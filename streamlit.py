@@ -197,7 +197,7 @@ def build_full_kb(include_history: bool = True, last_n: int = 5):
     )
 
     # return full text + meta + data for UI tables
-    return full_kb, {"gw": gw_now, "players": len(p_lines),"kb_built": header}, players, team_fx_lines
+    return full_kb, {"gw": gw_now, "players": len(p_lines),"header": header}, players, team_fx_lines
 
 
 # --------------- Build / refresh FULL KB ---------------
