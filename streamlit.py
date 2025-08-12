@@ -29,7 +29,7 @@ MODEL_NAME = os.getenv("FPL_LLM_MODEL", "gpt-5-mini")  # faster by default
 POS = {1: "GK", 2: "DEF", 3: "MID", 4: "FWD"}
 
 st.set_page_config(page_title="FPL Chat Agent", page_icon="⚽", layout="wide")
-st.title("⚽ FPL Chat Agent")
+st.title("⚽ FPL Assistant")
 
 # --------------- Sidebar: API key & options ---------------
 if "openai_key" not in st.session_state:
